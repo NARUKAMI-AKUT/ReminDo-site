@@ -5,79 +5,262 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>プライバシーポリシー — ReminDo</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px; color: #0A0A14; background: #F0FBFF; line-height: 1.7; }
-    h1 { color: #0A0A14; border-bottom: 2px solid #7DD9F5; padding-bottom: 8px; }
-    h2 { color: #0A0A14; margin-top: 2em; }
-    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-    th, td { border: 1px solid #7DD9F5; padding: 8px 12px; text-align: left; }
-    th { background: #E8F7FF; }
-    a { color: #0077AA; }
-    .updated { color: #666; font-size: 0.9em; }
-    .delete-box { background: #E8F7FF; border-left: 4px solid #7DD9F5; padding: 16px; margin: 1em 0; border-radius: 4px; }
+    :root {
+      --bg: #050e17;
+      --surface: #0d1f30;
+      --accent: #7DD9F5;
+      --text: #e8eaf0;
+      --muted: #8090a0;
+      --border: #1e3044;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+      line-height: 1.75;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .app-name { color: var(--accent); font-size: 1.1rem; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 0.5rem; }
+    h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .updated { color: var(--muted); font-size: 0.875rem; }
+    section { margin-bottom: 2.5rem; }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    p { margin-bottom: 0.75rem; }
+    ul { padding-left: 1.5rem; margin-bottom: 0.75rem; }
+    li { margin-bottom: 0.4rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 0.75rem; font-size: 0.9rem; }
+    th { background: var(--surface); color: var(--accent); font-weight: 600; text-align: left; padding: 0.6rem 0.75rem; border: 1px solid var(--border); }
+    td { padding: 0.6rem 0.75rem; border: 1px solid var(--border); vertical-align: top; }
+    tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .delete-box {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      border-radius: 4px;
+    }
+    .lang-divider { border: none; border-top: 2px solid var(--border); margin: 3rem 0; }
+    .lang-label { text-align: center; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 2rem; }
+    footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
+<div class="container">
 
-<h1>プライバシーポリシー</h1>
-<p class="updated">アプリ名: ReminDo（リマインドゥ）<br>
-運営: NARUKAMI AKUT<br>
-最終更新: 2026年6月6日</p>
+  <!-- ── 日本語 ── -->
+  <header>
+    <div class="app-name">ReminDo</div>
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新: 2026年6月6日</p>
+  </header>
 
-<p>本プライバシーポリシーは、ReminDo アプリ（以下「本アプリ」）がどのような情報を収集し、どのように使用するかを説明します。</p>
+  <section>
+    <h2>1. はじめに</h2>
+    <p>ReminDo（以下「本アプリ」）は、NARUKAMI AKUT が提供する家族向けリマインドアプリです。本ポリシーは、本アプリがどのような情報を収集し、どのように使用するかを説明します。</p>
+  </section>
 
-<h2>1. 収集する情報</h2>
+  <section>
+    <h2>2. 収集する情報</h2>
+    <table>
+      <thead>
+        <tr><th>情報の種類</th><th>用途</th><th>外部送信</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>メールアドレス</td>
+          <td>アカウント登録・認証</td>
+          <td>あり（Google / Firebase）</td>
+        </tr>
+        <tr>
+          <td>ユーザー ID</td>
+          <td>デバイス間のデータ同期</td>
+          <td>あり（Google / Firebase）</td>
+        </tr>
+        <tr>
+          <td>タスク・プロファイルデータ</td>
+          <td>アプリ機能・デバイス間同期</td>
+          <td>あり（Google / Firebase）</td>
+        </tr>
+        <tr>
+          <td>アプリの操作ログ</td>
+          <td>機能改善のための利用状況把握（Firebase Analytics）</td>
+          <td>あり（Google）</td>
+        </tr>
+        <tr>
+          <td>クラッシュ情報</td>
+          <td>不具合の検出・修正（Firebase Crashlytics）</td>
+          <td>あり（Google）</td>
+        </tr>
+        <tr>
+          <td>広告識別子</td>
+          <td>広告配信（Google AdMob）</td>
+          <td>あり（Google）</td>
+        </tr>
+        <tr>
+          <td>カレンダーデータ</td>
+          <td>Google カレンダーとのタスク同期（連携オン時のみ）</td>
+          <td>あり（Google）</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-<table>
-  <tr><th>データの種類</th><th>内容</th><th>目的</th></tr>
-  <tr><td>メールアドレス</td><td>アカウント登録時に入力したメールアドレス</td><td>アカウント管理・認証</td></tr>
-  <tr><td>ユーザー ID</td><td>Firebase が発行する匿名識別子</td><td>デバイス間同期</td></tr>
-  <tr><td>タスクデータ</td><td>ユーザーが入力したリストアイテム・プロファイル名</td><td>アプリ機能・デバイス間同期</td></tr>
-  <tr><td>アプリの操作ログ</td><td>タスク作成・完了などの操作履歴（Firebase Analytics）</td><td>アプリ改善・分析</td></tr>
-  <tr><td>クラッシュログ</td><td>アプリ異常終了時のエラー情報（Firebase Crashlytics）</td><td>バグ修正・品質改善</td></tr>
-  <tr><td>広告識別子</td><td>デバイスの広告 ID（AdMob）</td><td>広告配信</td></tr>
-  <tr><td>カレンダーデータ</td><td>Google カレンダー連携をオンにした場合のみ、期限付きタスクの情報</td><td>Google カレンダーとの同期</td></tr>
-</table>
+  <section>
+    <h2>3. 第三者サービス</h2>
+    <p>本アプリは以下の Google サービスを利用しています。各サービスの個人情報取り扱いについては、Google のプライバシーポリシーをご確認ください。</p>
+    <ul>
+      <li><strong>Firebase Authentication</strong> — アカウント管理・認証</li>
+      <li><strong>Cloud Firestore</strong> — デバイス間データ同期</li>
+      <li><strong>Firebase Analytics</strong> — 匿名の利用統計</li>
+      <li><strong>Firebase Crashlytics</strong> — クラッシュレポート収集</li>
+      <li><strong>Google AdMob</strong> — 広告配信（無料プランのみ）</li>
+      <li><strong>Google Calendar API</strong> — カレンダー同期（ユーザーが連携をオンにした場合のみ）</li>
+    </ul>
+    <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー →</a></p>
+  </section>
 
-<h2>2. 情報の共有</h2>
+  <section>
+    <h2>4. アカウントとデータの削除</h2>
+    <p>本アプリ内からアカウントとすべてのデータを削除できます。</p>
+    <div class="delete-box">
+      アプリを起動 → 設定 → アカウント → アカウントを削除<br>
+      削除すると、サーバー上のすべてのデータおよびアカウント情報が完全に削除されます。この操作は取り消せません。
+    </div>
+    <p>削除のご依頼やご不明点は、下記連絡先までお問い合わせください。</p>
+  </section>
 
-<p>収集した情報は以下の第三者サービスと共有されます。いずれも Google LLC が提供するサービスです。</p>
-<ul>
-  <li><strong>Firebase Authentication</strong> — アカウント管理</li>
-  <li><strong>Cloud Firestore</strong> — データ同期</li>
-  <li><strong>Firebase Analytics</strong> — 使用状況分析</li>
-  <li><strong>Firebase Crashlytics</strong> — クラッシュ報告</li>
-  <li><strong>Google AdMob</strong> — 広告配信（無料プランのみ）</li>
-  <li><strong>Google Calendar API</strong> — カレンダー同期（ユーザーが連携をオンにした場合のみ）</li>
-</ul>
+  <section>
+    <h2>5. 子どものプライバシー</h2>
+    <p>本アプリは家族向けに設計されており、13歳未満のお子様から意図的に個人情報を収集することはありません。保護者の管理のもとでご利用ください。</p>
+  </section>
 
-<p>上記以外の第三者への個人情報の提供は行いません。</p>
+  <section>
+    <h2>6. ポリシーの変更</h2>
+    <p>本ポリシーは予告なく変更される場合があります。変更後のポリシーはこのページに掲載し、最終更新日を更新します。</p>
+  </section>
 
-<h2>3. データの保存と保護</h2>
+  <section>
+    <h2>7. お問い合わせ</h2>
+    <p>プライバシーに関するご質問は下記までご連絡ください。</p>
+    <p><a href="mailto:narukami.dev@gmail.com">narukami.dev@gmail.com</a></p>
+  </section>
 
-<p>すべてのデータは HTTPS（TLS）で暗号化して転送されます。データは Google のサーバー（Firebase）に保存されます。</p>
+  <hr class="lang-divider">
+  <p class="lang-label">English</p>
 
-<h2>4. アカウントとデータの削除</h2>
+  <!-- ── English ── -->
+  <header>
+    <div class="app-name">ReminDo</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 6, 2026</p>
+  </header>
 
-<div class="delete-box">
-  <strong>アプリ内からアカウントを削除できます：</strong><br>
-  アプリを起動 → 設定 → アカウント → アカウントを削除<br><br>
-  削除すると、Firestore 上のすべてのデータおよびアカウント情報が完全に削除されます。この操作は取り消せません。
+  <section>
+    <h2>1. Overview</h2>
+    <p>ReminDo is a family reminder app developed by NARUKAMI AKUT. This policy explains what information the app collects and how it is used.</p>
+  </section>
+
+  <section>
+    <h2>2. Information We Collect</h2>
+    <table>
+      <thead>
+        <tr><th>Data Type</th><th>Purpose</th><th>Transmitted</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Email address</td>
+          <td>Account registration and authentication</td>
+          <td>Yes (Google / Firebase)</td>
+        </tr>
+        <tr>
+          <td>User ID</td>
+          <td>Cross-device data sync</td>
+          <td>Yes (Google / Firebase)</td>
+        </tr>
+        <tr>
+          <td>Tasks and profile data</td>
+          <td>App functionality and cross-device sync</td>
+          <td>Yes (Google / Firebase)</td>
+        </tr>
+        <tr>
+          <td>App usage logs</td>
+          <td>Feature improvement (Firebase Analytics)</td>
+          <td>Yes (Google)</td>
+        </tr>
+        <tr>
+          <td>Crash reports</td>
+          <td>Bug detection and fixes (Firebase Crashlytics)</td>
+          <td>Yes (Google)</td>
+        </tr>
+        <tr>
+          <td>Advertising identifier</td>
+          <td>Ad delivery (Google AdMob)</td>
+          <td>Yes (Google)</td>
+        </tr>
+        <tr>
+          <td>Calendar data</td>
+          <td>Task sync with Google Calendar (only when integration is enabled)</td>
+          <td>Yes (Google)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Third-Party Services</h2>
+    <p>The app uses the following Google services. Please refer to Google's Privacy Policy for details on how they handle data.</p>
+    <ul>
+      <li><strong>Firebase Authentication</strong> — account management and authentication</li>
+      <li><strong>Cloud Firestore</strong> — cross-device data sync</li>
+      <li><strong>Firebase Analytics</strong> — anonymous usage statistics</li>
+      <li><strong>Firebase Crashlytics</strong> — crash report collection</li>
+      <li><strong>Google AdMob</strong> — ad delivery (free plan only)</li>
+      <li><strong>Google Calendar API</strong> — calendar sync (only when the user enables the integration)</li>
+    </ul>
+    <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a></p>
+  </section>
+
+  <section>
+    <h2>4. Account and Data Deletion</h2>
+    <p>You can delete your account and all associated data from within the app.</p>
+    <div class="delete-box">
+      Open the app → Settings → Account → Delete Account<br>
+      All data stored on our servers will be permanently deleted. This action cannot be undone.
+    </div>
+    <p>For deletion requests or questions, please contact us at the address below.</p>
+  </section>
+
+  <section>
+    <h2>5. Children's Privacy</h2>
+    <p>This app is designed for families and does not intentionally collect personal information from children under 13. Please use the app under parental supervision.</p>
+  </section>
+
+  <section>
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this policy at any time. Changes will be posted on this page with an updated date.</p>
+  </section>
+
+  <section>
+    <h2>7. Contact</h2>
+    <p><a href="mailto:narukami.dev@gmail.com">narukami.dev@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2026 NARUKAMI AKUT — ReminDo
+  </footer>
+
 </div>
-
-<p>削除のご依頼やご不明点は、下記メールアドレスまでお問い合わせください。</p>
-
-<h2>5. 子どものプライバシー</h2>
-
-<p>本アプリは家族向けに設計されており、13歳未満の子どもから意図的に個人情報を収集することはありません。保護者の管理のもとでご利用ください。</p>
-
-<h2>6. ポリシーの変更</h2>
-
-<p>本ポリシーを変更する場合は、このページを更新します。重要な変更がある場合はアプリ内でお知らせします。</p>
-
-<h2>7. お問い合わせ</h2>
-
-<p>プライバシーに関するご質問・ご要望は以下までご連絡ください：<br>
-<a href="mailto:narukami.dev@gmail.com">narukami.dev@gmail.com</a></p>
-
 </body>
 </html>
