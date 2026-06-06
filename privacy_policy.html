@@ -135,9 +135,22 @@
     <h2>4. アカウントとデータの削除</h2>
     <p>本アプリ内からアカウントとすべてのデータを削除できます。</p>
     <div class="delete-box">
-      アプリを起動 → 設定 → アカウント → アカウントを削除<br>
-      削除すると、サーバー上のすべてのデータおよびアカウント情報が完全に削除されます。この操作は取り消せません。
+      <strong>削除手順：</strong><br>
+      アプリを起動 → 設定 → アカウント → アカウントを削除<br><br>
+      この操作は取り消せません。
     </div>
+    <p><strong>削除されるデータ：</strong></p>
+    <ul>
+      <li>Firebase Authentication アカウント（メールアドレス・ユーザー ID）</li>
+      <li>Cloud Firestore に保存されたタスク・プロファイル・カテゴリ・リマインダーデータ</li>
+      <li>端末内のローカルデータ</li>
+    </ul>
+    <p><strong>保持されるデータ（削除後も Google が管理）：</strong></p>
+    <ul>
+      <li>Firebase Analytics の匿名集計データ — Google のデータ保持ポリシーに準拠（最大 14 か月）</li>
+      <li>Firebase Crashlytics のクラッシュログ — Google のデータ保持ポリシーに準拠（90 日間）</li>
+      <li>Google AdMob の広告配信データ — Google のプライバシーポリシーに準拠</li>
+    </ul>
     <p>削除のご依頼やご不明点は、下記連絡先までお問い合わせください。</p>
   </section>
 
@@ -236,9 +249,22 @@
     <h2>4. Account and Data Deletion</h2>
     <p>You can delete your account and all associated data from within the app.</p>
     <div class="delete-box">
-      Open the app → Settings → Account → Delete Account<br>
-      All data stored on our servers will be permanently deleted. This action cannot be undone.
+      <strong>How to delete your account:</strong><br>
+      Open the app → Settings → Account → Delete Account<br><br>
+      This action cannot be undone.
     </div>
+    <p><strong>Data that will be deleted:</strong></p>
+    <ul>
+      <li>Firebase Authentication account (email address and user ID)</li>
+      <li>All tasks, profiles, categories, and reminder data stored in Cloud Firestore</li>
+      <li>Local data stored on your device</li>
+    </ul>
+    <p><strong>Data retained after deletion (managed by Google):</strong></p>
+    <ul>
+      <li>Firebase Analytics anonymous aggregated data — retained per Google's data retention policy (up to 14 months)</li>
+      <li>Firebase Crashlytics crash logs — retained per Google's data retention policy (90 days)</li>
+      <li>Google AdMob ad delivery data — retained per Google's Privacy Policy</li>
+    </ul>
     <p>For deletion requests or questions, please contact us at the address below.</p>
   </section>
 
